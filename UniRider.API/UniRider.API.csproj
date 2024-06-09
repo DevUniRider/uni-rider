@@ -8,36 +8,26 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <!-- Audit Trails related packages -->
         <PackageReference Include="EntityFrameworkCore.CreatedUpdatedDate" Version="8.0.0" />
+        <!-- EntityFrameworkCore Database Persistence related packages -->
         <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Relational.Design" Version="1.1.6" />
+        <!-- Naming convention conversion related packages -->
         <PackageReference Include="Humanizer" Version="2.14.1" />
+        <!-- MySQL Database Persistence related packages -->
         <PackageReference Include="MySql.EntityFrameworkCore" Version="8.0.2" />
+        <!-- OpenAPI Documentation related packages -->
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.5.0"/>
+        <!-- BCrypt Encription related packages -->
         <PackageReference Include="BCrypt.Net-Next" Version="4.0.3"/>
+        <!-- JSON Web Tokens related packages -->
         <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.0"/>
         <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6"/>
         <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.6.0"/>
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Payment\Application\Internal\CommandServices\" />
-      <Folder Include="Payment\Application\Internal\OutboundServices\" />
-      <Folder Include="Payment\Application\Internal\QueryServices\" />
-      <Folder Include="Payment\Infrastructure\Hashing\BCrypt\Services\" />
-      <Folder Include="Payment\Infrastructure\Persistence\EFC\Repositories\" />
-      <Folder Include="Payment\Infrastructure\Pipeline\Middleware\Attributes\" />
-      <Folder Include="Payment\Infrastructure\Pipeline\Middleware\Components\" />
-      <Folder Include="Payment\Infrastructure\Pipeline\Middleware\Extensions\" />
-      <Folder Include="Payment\Infrastructure\Tokens\JWT\Configuration\" />
-      <Folder Include="Payment\Infrastructure\Tokens\JWT\Services\" />
-      <Folder Include="Payment\Interfaces\ACL\Services\" />
-      <Folder Include="Payment\Interfaces\REST\Resources\" />
-      <Folder Include="Payment\Interfaces\REST\Transform\" />
-    </ItemGroup>
-
 
 
 </Project>

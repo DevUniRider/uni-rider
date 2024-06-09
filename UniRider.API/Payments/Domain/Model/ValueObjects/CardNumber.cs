@@ -1,4 +1,4 @@
-﻿namespace UniRider.API.Payment.Domain.Model.ValueObjects;
+﻿namespace UniRider.API.Payments.Domain.Model.ValueObjects;
 
 public record CardNumber(string Cardnumber)
 {
