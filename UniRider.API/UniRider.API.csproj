@@ -22,6 +22,22 @@
         <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="7.6.0"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Payment\Application\Internal\CommandServices\" />
+      <Folder Include="Payment\Application\Internal\OutboundServices\" />
+      <Folder Include="Payment\Application\Internal\QueryServices\" />
+      <Folder Include="Payment\Infrastructure\Hashing\BCrypt\Services\" />
+      <Folder Include="Payment\Infrastructure\Persistence\EFC\Repositories\" />
+      <Folder Include="Payment\Infrastructure\Pipeline\Middleware\Attributes\" />
+      <Folder Include="Payment\Infrastructure\Pipeline\Middleware\Components\" />
+      <Folder Include="Payment\Infrastructure\Pipeline\Middleware\Extensions\" />
+      <Folder Include="Payment\Infrastructure\Tokens\JWT\Configuration\" />
+      <Folder Include="Payment\Infrastructure\Tokens\JWT\Services\" />
+      <Folder Include="Payment\Interfaces\ACL\Services\" />
+      <Folder Include="Payment\Interfaces\REST\Resources\" />
+      <Folder Include="Payment\Interfaces\REST\Transform\" />
+    </ItemGroup>
+
 
 
 </Project>
