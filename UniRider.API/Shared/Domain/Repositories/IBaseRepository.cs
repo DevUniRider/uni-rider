@@ -8,3 +8,4 @@ public interface IBaseRepository<TEntity>
     void Remove(TEntity entity);
     Task<IEnumerable<TEntity>> ListAsync();
 }
+
