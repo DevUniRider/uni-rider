@@ -23,6 +23,7 @@ public class RequestAuthorizationMiddleware(RequestDelegate next)
             return;
         }
         Console.WriteLine("Entering authorization");
+        
         var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
 
         

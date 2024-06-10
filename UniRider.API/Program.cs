@@ -22,6 +22,8 @@ using UniRider.API.Payments.Application.Internal.CommandServices;
 using UniRider.API.Payments.Application.Internal.QueryServices;
 using UniRider.API.Payments.Infrastructure.Persistence.EFC.Repositories;
 using UniRider.API.Payments.Domain.Repositories;
+using UniRider.API.Record.Interfaces.ACL;
+using UniRider.API.Record.Interfaces.ACL.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -117,6 +119,7 @@ builder.Services.AddScoped<IUserCommandService, UserCommandService>();
 builder.Services.AddScoped<IUserQueryService, UserQueryService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IHashingService, HashingService>();
+builder.Services.AddScoped<IRecordContextFacade, RecordContextFacade>();
 
 // Payment Bounded Context Injection Configuration
 builder.Services.AddScoped<IPaymentCommandService, PaymentCommandService>();

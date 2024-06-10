@@ -3,7 +3,7 @@ using UniRider.API.Record.Interfaces.REST.Resources;
 
 namespace UniRider.API.Record.Interfaces.REST.Transform;
 
-public class SignUpCommandFromResourceAssembler
+public static class SignUpCommandFromResourceAssembler
 {
     public static SignUpCommand ToCommandFromResource(SignUpResource resource)
     {
