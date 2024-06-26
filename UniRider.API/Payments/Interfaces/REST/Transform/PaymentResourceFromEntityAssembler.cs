@@ -7,6 +7,6 @@ public class PaymentResourceFromEntityAssembler
 {
     public static PaymentResource ToResourceFromEntity(Payment entity)
     {
-        return new PaymentResource(entity.Id, entity.Cardnumber.Value, entity.Expirydate.Value, entity.Cardverification.Value);
+        return new PaymentResource(entity.Id, entity.Cardnumber.Value, entity.Expirationdate.Value, entity.Cardverification.Value);
     }
 }
