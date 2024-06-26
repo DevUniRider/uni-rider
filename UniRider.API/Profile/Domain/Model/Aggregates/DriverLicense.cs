@@ -25,4 +25,5 @@ public partial class DriverLicense
         this.ExpeditionDate = command.ExpeditionDate;
         this.ExpirationDate = command.ExpirationDate;
     }
+    public ICollection<VehicleDocument> VehicleDocument { get; }
 }
