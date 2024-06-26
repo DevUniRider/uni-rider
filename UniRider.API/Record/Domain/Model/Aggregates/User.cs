@@ -7,6 +7,11 @@ public class User(string username, string passwordHash)
 
     public int Id { get; }
     public string Username { get; private set; } = username;
+    public string Name { get; private set; }
+    public string LastName { get; private set; }
+    public string Dni{ get; private set; }
+    
+    
 
     [JsonIgnore] public string PasswordHash { get; private set; } = passwordHash;
     
