@@ -1,6 +1,9 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.OpenApi.Models;
+using UniRider.API.Shared.Domain.Repositories;
 using UniRider.API.Shared.Infrastructure.Interfaces.ASP.Configuration;
 using UniRider.API.Shared.Infrastructure.Persistence.EFC.Configuration;
+using UniRider.API.Shared.Infrastructure.Persistence.EFC.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +34,32 @@ builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(
+    c =>
+    {
+        c.SwaggerDoc("v1",
+            new OpenApiInfo()
+            {
+                Title = "UniRider API",
+                Version = "v1",
+                Description = "API for UniRider",
+                TermsOfService = new Uri("https://UniRider-Api.com/tos"),
+                Contact = new OpenApiContact()
+                {
+                    Name = "UniRider API",
+                    Email = "contact@rider.com"
+                },
+                License = new OpenApiLicense
+                {
+                    Name = "Apace 2.0",
+                    Url = new Uri("https://www.apache.org/licenses/LICENSE-2.0.html")
+                }
+            });
+        c.EnableAnnotations();
+    });
+
+// shared bounded context injection configuration
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 

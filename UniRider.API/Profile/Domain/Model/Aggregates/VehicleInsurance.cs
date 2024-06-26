@@ -9,6 +9,7 @@ public partial class VehicleInsurance
     public string Insurer { get; private set; }
     public string StartDate { get; private set; }
     public string ExpirationDate { get; private set; }
+    //public IEnumerable<VehicleDocument>? VehicleDocument { get; set; }
 
     protected VehicleInsurance()
     {
@@ -25,4 +26,5 @@ public partial class VehicleInsurance
         this.StartDate = command.StartDate;
         this.ExpirationDate = command.ExpirationDate;
     }
+    public ICollection<VehicleDocument> VehicleDocument { get; }
 }

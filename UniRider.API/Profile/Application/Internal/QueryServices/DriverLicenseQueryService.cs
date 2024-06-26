@@ -27,4 +27,9 @@ public class DriverLicenseQueryService(IDriverLicenseRepository driverLicenseRep
     {
         return await driverLicenseRepository.FindAllByExpeditionDateAsync(query.ExpeditionDate);
     }
+
+    public async Task<IEnumerable<DriverLicense>> Handle(GetAllDriverLicensesQuery query)
+    {
+        return await driverLicenseRepository.ListAsync();
+    }
 }

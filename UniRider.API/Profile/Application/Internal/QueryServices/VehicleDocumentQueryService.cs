@@ -22,4 +22,9 @@ public class VehicleDocumentQueryService(IVehicleDocumentRepository vehicleDocum
     {
         return await vehicleDocumentRepository.FindAllByBrandAndModelAsync(query.Brand, query.Model);
     }
+
+    public async Task<IEnumerable<VehicleDocument>> Handle(GetAllVehicleDocumentsQuery query)
+    {
+        return await vehicleDocumentRepository.ListAsync();
+    }
 }

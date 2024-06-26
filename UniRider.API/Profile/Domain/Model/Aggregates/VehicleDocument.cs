@@ -28,7 +28,6 @@ public partial class VehicleDocument
         VehicleInsuranceId = vehicleInsuranceId;
     }
     
-    
     public VehicleDocument(CreateVehicleDocumentCommand command)
     {
         Brand = command.Brand;

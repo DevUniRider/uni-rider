@@ -9,6 +9,7 @@ public partial class DriverLicense
     public string Number { get; private set; }
     public string ExpeditionDate { get; private set; }
     public string ExpirationDate { get; private set; }
+    //public IEnumerable<VehicleDocument>? VehicleDocument { get; set; }
 
     protected DriverLicense()
     {
@@ -25,4 +26,5 @@ public partial class DriverLicense
         this.ExpeditionDate = command.ExpeditionDate;
         this.ExpirationDate = command.ExpirationDate;
     }
+    public ICollection<VehicleDocument> VehicleDocument { get; }
 }

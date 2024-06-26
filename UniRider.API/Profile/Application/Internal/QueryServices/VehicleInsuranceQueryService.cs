@@ -17,4 +17,9 @@ public class VehicleInsuranceQueryService(IVehicleInsuranceRepository vehicleIns
     {
         return await vehicleInsuranceRepository.FindAllByPolicyNumberAsync(query.PolicyNumber);
     }
+
+    public async Task<IEnumerable<VehicleInsurance>> Handle(GetAllVehicleInsurancesQuery query)
+    {
+        return await vehicleInsuranceRepository.ListAsync();
+    }
 }
