@@ -25,4 +25,5 @@ public partial class VehicleInsurance
         this.StartDate = command.StartDate;
         this.ExpirationDate = command.ExpirationDate;
     }
+    public ICollection<VehicleDocument> VehicleDocument { get; }
 }

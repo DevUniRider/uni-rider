@@ -9,4 +9,5 @@ public interface IDriverLicenseQueryService
     Task<IEnumerable<DriverLicense>> Handle(GetAllDriverLicenseByNumberQuery query);
     Task<IEnumerable<DriverLicense>> Handle(GetAllDriverLicenseByTypeQuery query);
     Task<IEnumerable<DriverLicense>> Handle(GetAllDriverLicenseByExpeditionDateQuery query);
+    Task<IEnumerable<DriverLicense>> Handle(GetAllDriverLicensesQuery query);
 }
